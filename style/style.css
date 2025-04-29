@@ -12,7 +12,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 30px 40px;
+  padding: 30px 65px;
   color: #ffffff;
 }
 
@@ -30,19 +30,20 @@ header {
 }
 
 h1 {
-  font-size: 21px;
+  font-size: 35px;
 }
 
 nav a {
   margin-left: 40px;
   text-decoration: none;
   color: #ffffff;
+  font-size: 14px;
 }
 
 .containerCoffe {
   background-image: url("/assets/img/2bf2b97f0a7728f3ba28e3c6592145766475c92c.jpg");
   background-size: cover;
-  width: 100%;
+  background-position: center;
   height: 100vh;
   display: flex;
   align-items: center;
@@ -78,4 +79,58 @@ nav a {
   border: none;
   font-weight: 700;
   font-size: 17px;
+}
+
+main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.containerDicover {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0 140px;
+  height: 700px;
+  position: relative;
+}
+
+.containerDicover img {
+  width: 40%;
+  height: auto;
+}
+
+.containerDicover div h2 {
+  font-size: 54px;
+  color: #603809;
+  margin-bottom: 20px;
+}
+
+.containerDicover div {
+  font-size: 20px;
+  color: #707070;
+  height: 300px;
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  letter-spacing: 2px;
+  height: auto;
+  margin-right: 40px;
+}
+
+.containerDicover p {
+  margin-bottom: 20px;
+}
+
+.imgCofferPosition {
+  position: absolute;
+  height: auto;
+  transform: rotateX(-180deg);
+  left: -150px;
+  bottom: 10px;
+  display: flex;
 }
