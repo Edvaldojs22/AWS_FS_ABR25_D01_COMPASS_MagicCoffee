@@ -163,7 +163,7 @@ main {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 10px;
+  gap: 20px;
   padding: 0 20px;
 }
 .dashboardCards .card img {
@@ -205,4 +205,105 @@ main {
   top: 142px;
   left: 50%;
   transform: translate(-50%);
+}
+.containerTable {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  max-width: 1190px;
+  margin-bottom: 50px;
+}
+
+.containerTable div:nth-child(1) {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  margin-bottom: 15px;
+  max-width: 710px;
+}
+
+.containerTable div:nth-child(2) {
+  border: 1px solid #aa855865;
+  border-radius: 10px;
+ 
+}
+
+.containerTable button {
+  padding: 10px 30px;
+  color: #aa8558;
+  border: 2px solid #f9c06a;
+  filter: drop-shadow(0px 6px 12px rgba(249, 192, 106, 0.22));
+  border-radius: 24px;
+  font-size: 15px;
+  font-family: "Playfair Display";
+  margin: 5px;
+}
+
+table {
+  border-collapse: collapse;
+  font-size: 18px;
+  border-spacing: 0;
+  width: 100%;
+}
+
+thead {
+  position: sticky;
+  top: 0;
+  z-index: 1;
+}
+
+thead tr {
+  width: 100%;
+  background-color: #ffeed8;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  font-family: "Playfair Display";
+  color: #603809;
+}
+
+thead th {
+  padding: 15px 0 0 30px;
+  text-align: left;
+  font-weight: bold;
+  width: 24%;
+}
+
+thead tr:first-child {
+  border-top-left-radius: 10px;
+}
+thead tr:last-child {
+  border-top-right-radius: 10px;
+}
+
+tbody {
+  max-height: 580px;
+  overflow-y: auto;
+  scrollbar-width: none;
+  display: block;
+}
+
+tbody td {
+  padding: 15px 0;
+  text-align: left;
+  color: #968162;
+  font-family: sans-serif;
+}
+
+tbody tr {
+  display: flex;
+  justify-content: space-between;
+}
+
+tbody td {
+  width: 24%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  padding-left: 30px;
+  font-size: 22px;
+}
+
+table tr {
+  border-bottom: 1px solid #ddd;
 }
