@@ -225,7 +225,6 @@ main {
 .containerTable div:nth-child(2) {
   border: 1px solid #aa855865;
   border-radius: 10px;
- 
 }
 
 .containerTable button {
@@ -247,7 +246,6 @@ table {
 }
 
 thead {
-  position: sticky;
   top: 0;
   z-index: 1;
 }
@@ -307,3 +305,52 @@ tbody td {
 table tr {
   border-bottom: 1px solid #ddd;
 }
+
+.caffeDashboard {
+  background: linear-gradient(
+    270.07deg,
+    #603809 38%,
+    #4e2e07 57%,
+    #251503 100%
+  );
+  width: 100%;
+  height: 574px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  font-family: "Playfair Display";
+  margin-bottom: 100px;
+}
+
+.caffeDashboard div{
+  color: #ffffff;
+  width: 575px;
+  height: 304px;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  margin-left: 7%;
+  
+}
+
+.caffeDashboard p:first-of-type{
+  font-size: 54px;
+  font-weight: bold;
+}
+
+.caffeDashboard p:last-of-type{
+font-size: 20px;
+font-weight: 100;
+letter-spacing: 2px;
+}
+
+.caffeDashboard img{
+  width: 300px;
+  margin-right: 11%;
+
+}
+
+
+
+
+
