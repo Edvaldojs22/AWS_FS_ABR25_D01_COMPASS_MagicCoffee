@@ -15,8 +15,9 @@ async function searchData(params) {
 function updateTable(items) {
   console.log(items.length)
   const tableBody = document.querySelector("#tableBody");
-
+  
   items.forEach((items) => {
+    let price = convertToReal(items.price)
     const tr = document.createElement("tr");
     const itemName = document.createElement("td");
     itemName.textContent = items.name;
@@ -25,7 +26,7 @@ function updateTable(items) {
     itemType.textContent = items.type;
 
     const itemPreice = document.createElement("td");
-    itemPreice.textContent = items.price;
+    itemPreice.textContent = `R$ ${price.toFixed(2)}`;
 
     tr.appendChild(itemName);
     tr.appendChild(itemType);
@@ -36,3 +37,10 @@ function updateTable(items) {
 }
 
 searchData();
+
+
+function  convertToReal(value) {
+  return   5.66 * value
+}
+
+// 5,66
