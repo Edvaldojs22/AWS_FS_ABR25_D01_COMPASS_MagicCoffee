@@ -1,3 +1,5 @@
+@import url("https://fonts.googleapis.com/css2?family=Clicker+Script&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pangolin&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Clicker+Script&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pangolin&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&display=swap");
 * {
   margin: 0;
   padding: 0;
@@ -12,7 +14,7 @@ header {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 30px 65px;
+  padding: 30px 90px;
   color: #ffffff;
 }
 
@@ -27,17 +29,26 @@ header {
   border: none;
   font-weight: 700;
   font-size: 17px;
+  font-family: "Playfair Display";
+}
+
+header .buttonOrder {
+  font-size: 16px;
+  font-weight: 500;
 }
 
 h1 {
   font-size: 35px;
+  font-family: "Clicker Script", sans-serif;
+  font-weight: 100;
 }
 
 nav a {
-  margin-left: 40px;
+  margin-left: 45px;
   text-decoration: none;
   color: #ffffff;
   font-size: 14px;
+  font-family: "Playfair Display";
 }
 
 .containerCoffe {
@@ -48,23 +59,23 @@ nav a {
   display: flex;
   align-items: center;
   color: #ffffff;
+  font-family: "Playfair Display";
+  box-shadow: inset 0 0 200px black;
 }
 
 .containerCoffe div {
   display: flex;
   flex-direction: column;
   align-items: start;
-  margin-left: 60px;
+  margin-left: 90px;
+  margin-top: 100px;
   font-size: 20px;
+  width: 40%;
 }
 
 .containerCoffe div p:nth-child(2) {
   font-size: 220px;
-  margin: 10px 0;
-}
-
-.containerCoffe div p:nth-child(3) {
-  width: 70%;
+  font-family: "Clicker Script", sans-serif;
 }
 
 .containerCoffe button {
@@ -92,10 +103,11 @@ main {
   display: flex;
   align-items: center;
   justify-content: center;
+  padding: 0 0 0 60px;
   width: 100%;
-  padding: 0 140px;
   height: 700px;
   position: relative;
+  font-family: "Playfair Display";
 }
 
 .containerDicover img {
@@ -103,8 +115,9 @@ main {
   height: auto;
 }
 
-.containerDicover div h2 {
+.title {
   font-size: 54px;
+  font-weight: 700;
   color: #603809;
   margin-bottom: 20px;
 }
@@ -112,25 +125,84 @@ main {
 .containerDicover div {
   font-size: 20px;
   color: #707070;
-  height: 300px;
   width: 50%;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
   letter-spacing: 2px;
-  height: auto;
   margin-right: 40px;
+  line-height: 34px;
 }
 
 .containerDicover p {
-  margin-bottom: 20px;
+  margin: 20px 0 30px 0;
 }
 
 .imgCofferPosition {
   position: absolute;
   height: auto;
   transform: rotateX(-180deg);
-  left: -150px;
-  bottom: 10px;
+  left: -135px;
+  bottom: -40px;
   display: flex;
+}
+
+.containerCards {
+  text-align: center;
+  width: 100%;
+  margin-bottom: 100px;
+}
+
+.containerCards p {
+  font-size: 20px;
+  font-family: "Playfair Display";
+  color: #707070;
+  margin-bottom: 30px;
+}
+.dashboardCards {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  padding: 0 20px;
+}
+.dashboardCards .card img {
+  width: 100%;
+}
+.card {
+  background-color: #fff9f1;
+  border: solid 1px #fbe1be;
+  width: 280px;
+  height: 364px;
+}
+
+.cardAtributes p:nth-child(1) {
+  font-weight: bold;
+  color: #603809;
+  font-size: 22px;
+}
+.cardAtributes p:nth-child(2) {
+  color: #1e1e1e;
+  font-size: 16px;
+}
+
+.cardAtributes p:nth-child(3) {
+  font-weight: bold;
+  color: #603809;
+}
+
+.cardAtributes {
+  position: relative;
+  height: 143px;
+}
+
+.cardAtributes p {
+  margin: 8px 0 0;
+}
+
+.cardAtributes .buttonOrder {
+  position: absolute;
+  top: 142px;
+  left: 50%;
+  transform: translate(-50%);
 }
