@@ -306,7 +306,7 @@ table tr {
   border-bottom: 1px solid #ddd;
 }
 
-.caffeDashboard {
+.coffeDashboard {
   background: linear-gradient(
     270.07deg,
     #603809 38%,
@@ -322,7 +322,7 @@ table tr {
   margin-bottom: 100px;
 }
 
-.caffeDashboard div{
+.coffeDashboard div{
   color: #ffffff;
   width: 575px;
   height: 304px;
@@ -333,18 +333,18 @@ table tr {
   
 }
 
-.caffeDashboard p:first-of-type{
+.coffeDashboard p:first-of-type{
   font-size: 54px;
   font-weight: bold;
 }
 
-.caffeDashboard p:last-of-type{
+.coffeDashboard p:last-of-type{
 font-size: 20px;
 font-weight: 100;
 letter-spacing: 2px;
 }
 
-.caffeDashboard img{
+.coffeDashboard img{
   width: 300px;
   margin-right: 11%;
 
