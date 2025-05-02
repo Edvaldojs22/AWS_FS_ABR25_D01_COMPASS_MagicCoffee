@@ -1,16 +1,38 @@
 let dataItems = [];
+let dataFeedbacks = [];
 
 async function searchData() {
   try {
-    const response = await fetch("../data/all-items.json");
-    if (!response.ok) throw new Error("Error loading JSON");
-    const jsonData = await response.json();
-    dataItems = jsonData.data;
+    const [responseItems, responseFesdbacks] = await Promise.all([
+      fetch("../data/all-items.json"),
+      fetch("../data/feedbacks.json"),
+    ]);
+
+    if (!responseItems.ok || !responseFesdbacks.ok)
+      throw new Error("Error loading JSON");
+
+    const jsonDataItems = await responseItems.json();
+    const jsonDataFeedbacks = await responseFesdbacks.json();
+
+    dataItems = jsonDataItems.data;
+    dataFeedbacks = jsonDataFeedbacks.data;
+
     updateTable(dataItems);
+    pushFeedbaks();
+    $("#carrosel").slick({
+      arrows: true,
+      autoplay: true,
+      autoplaySpeed: 3000,
+      prevArrow:
+        '<button type="button" class="slick-prev"> <img class="imgArrawLeft"  src="assets/img/left-arrow.png" alt=""></button>',
+      nextArrow:
+        '<button type="button" class="slick-next"><img class="imgArrawRight"  src="assets/img/right-arrow.png"</button>',
+    });
   } catch (error) {
     console.log("Erro:", error);
   }
 }
+
 searchData();
 
 function updateTable(items) {
@@ -52,6 +74,7 @@ buttonFilter[0].style.color = "#aa8558";
 
 buttonFilter.forEach((filterButton) =>
   filterButton.addEventListener("click", (event) => {
+    console.log(dataFeedbacks);
     buttonFilter.forEach((button) => {
       button.style.backgroundColor = "";
       button.style.color = "#aa8558";
@@ -71,3 +94,35 @@ buttonFilter.forEach((filterButton) =>
     }
   })
 );
+
+function pushFeedbaks() {
+  const painelFeedbak = document.querySelector("#carrosel");
+
+  dataFeedbacks.forEach((element) => {
+    painel = document.createElement("div");
+    painel.classList.add("painel");
+
+    text = document.createElement("p");
+    text.textContent = element.message;
+
+    painelText = document.createElement("div");
+    painelText.classList.add("painelText");
+
+    textName = document.createElement("p");
+    textName.textContent = element.full_name;
+
+    textProfession = document.createElement("p");
+    textProfession.textContent = element.profession;
+
+    img = document.createElement("img");
+    img.src = element.image_url;
+
+    painel.appendChild(text);
+    painelText.appendChild(textName);
+    painelText.appendChild(textProfession);
+    painel.appendChild(painelText);
+    painel.appendChild(img);
+
+    painelFeedbak.appendChild(painel);
+  });
+}
