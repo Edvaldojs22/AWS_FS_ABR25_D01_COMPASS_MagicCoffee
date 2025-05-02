@@ -171,18 +171,23 @@ main {
 .dashboardCards {
   display: flex;
   justify-content: center;
-  align-items: center;
+  align-items: start;
   gap: 20px;
   padding: 0 20px;
 }
-.dashboardCards .card img {
-  width: 100%;
-}
+
 .card {
   background-color: #fff9f1;
   border: solid 1px #fbe1be;
-  width: 280px;
-  height: 364px;
+  max-width: 280px;
+  height: 366px;
+}
+
+.card img {
+  width: 100%;
+  max-width: 280px;
+  height: 222px;
+  object-fit: cover;
 }
 
 .cardAtributes p:nth-child(1) {
@@ -202,7 +207,6 @@ main {
 
 .cardAtributes {
   position: relative;
-  height: 143px;
 }
 
 .cardAtributes p {
@@ -211,7 +215,7 @@ main {
 
 .cardAtributes .buttonOrder {
   position: absolute;
-  top: 142px;
+  top: 105px;
   left: 50%;
   transform: translate(-50%);
   cursor: pointer;
@@ -383,74 +387,53 @@ table tr {
   margin-bottom: 100px;
   position: relative;
   width: 100%;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
   justify-content: center;
   text-align: center;
-}
-
-.carroselFeendback img {
-  width: 200px;
+  height: 740px;
 }
 
 .containrFeendback > p {
-  font-weight: 100;
-  margin-bottom: 30px;
+  margin-bottom: 40px;
 }
 
-.carroselFeendback {
+.containrFeendback #carrosel {
+  width: 980px;
+  height: 524px;
   background: #fff9f1;
   border: 1px solid rgba(249, 192, 106, 0.42);
-  width: calc(100% - 20%);
-  max-width: 980px;
-  height: 524px;
+  margin: 0 auto;
+}
+.imgArrawLeft {
+  width: 22px;
+}
+.imgArrawRight {
+  width: 24px;
+}
+
+.painel {
+  height: 524px !important;
+  padding: 160px 150px 0;
+  width: 980px !important;
   position: relative;
 }
 
-.mark {
+.painel > p {
+  font-size: 18px;
+  margin-bottom: 20px;
+  line-height: 30px;
+}
+
+.painelText {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+.marks {
   font-size: 220px;
   color: #603809;
   position: absolute;
-  top: -40px;
-  left: 30px;
-}
-.carroselFeendback {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
-  gap: 20px;
-  padding-top: 80px;
-  padding-bottom: 50px;
-}
-.carroselFeendback p:nth-of-type(2) {
-  font-size: 18px;
-  letter-spacing: 1px;
-  line-height: 1.9;
-  padding: 0 100px;
-}
-
-#arrowLeft,
-#arrowRigth {
-  position: absolute;
-  padding: 30px;
-  border: none;
-  background: #f9c06a;
-  box-shadow: 0px 6px 12px rgba(249, 192, 106, 0.22);
-  border-radius: 16px;
-}
-
-#arrowLeft {
-  left: -40px;
-  top: 50%;
-  transform: translateY(-50%);
-}
-
-#arrowRigth {
-  right: -40px;
-  top: 50%;
-  transform: translateY(-50%);
+  top: 120px;
+  left: 230px;
 }
 
 .liquidCoffee {
@@ -470,30 +453,13 @@ table tr {
   transform: rotate(180deg);
 }
 
-#imgCliente {
-  background-image: url("/assets/img/24097e766969aa37120afd0cc7197b811ee169b5.jpg");
-
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
-  width: 112px;
-  height: 120px;
-  position: absolute;
-  bottom: -44px;
-  border-radius: 16px;
-}
-
-.carroselFeendback div {
-  display: flex;
-  flex-direction: column;
-}
-
-.carroselFeendback div > p:nth-child(1) {
+.painelText p:first-child {
   color: #603809;
   font-size: 32px;
   font-weight: bold;
 }
-.carroselFeendback div > p:nth-child(2) {
+
+.painelText p:last-child {
   font-size: 20px;
 }
 
@@ -624,4 +590,17 @@ footer > div:nth-child(2) div {
   height: 100%;
   font-size: 18px;
   color: #ffffffb4;
+}
+
+#carrosel {
+  width: 800px;
+}
+
+.slick-prev,
+.slick-next {
+  background-color: rgba(0, 0, 0, 0.5); /* Cor de fundo */
+  border: none; /* Sem borda */
+  color: white; /* Cor do ícone ou texto */
+  padding: 10px; /* Espaçamento dentro do botão */
+  font-size: 18px; /* Tamanho do ícone ou texto */
 }
