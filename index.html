@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Magic Coffee</title>
     <link rel="stylesheet" href="style/style.css" />
+    <link rel="stylesheet" href="libs/slick/slick.css" />
+    <link rel="stylesheet" href="libs/slick/slick-theme.css" />
   </head>
   <body>
     <header>
@@ -61,7 +63,7 @@
         <div class="dashboardCards">
           <div class="card">
             <img
-              src="assets/img/4840b0d1d112b723d1248c13c39df3f18a0a07a0.jpg"
+              src="assets/img/4bab679797a32ce3b40a10cb6cfcdd3fa190220a.jpg"
               alt=""
             />
             <div class="cardAtributes">
@@ -74,7 +76,7 @@
 
           <div class="card">
             <img
-              src="assets/img/4840b0d1d112b723d1248c13c39df3f18a0a07a0.jpg"
+              src="assets/img/8b5313290bc32724346fb4d69f87cac3a1e1c7f8.jpg"
               alt=""
             />
             <div class="cardAtributes">
@@ -87,7 +89,7 @@
 
           <div class="card">
             <img
-              src="assets/img/4840b0d1d112b723d1248c13c39df3f18a0a07a0.jpg"
+              src="assets/img/4efad0ba2a26c2f711f3cca80ee2e4bcbc443e06.jpg"
               alt=""
             />
             <div class="cardAtributes">
@@ -160,26 +162,9 @@
 
       <section class="containrFeendback">
         <h4 class="title">Our coffee perfection feedback</h4>
-        <p>Our customers has amazing things to say about us</p>
+        <p class="pa">Our customers has amazing things to say about us</p>
 
-        <div class="carroselFeendback">
-          <p class="mark">“</p>
-          <button id="arrowLeft">left</button>
-          <button id="arrowRigth">right</button>
-          <p>
-            This café has become my sanctuary. Whether it’s the smooth espresso
-            to start my day or the cozy environment that helps me focus during
-            meetings, this place has it all. The staff is friendly, and the
-            atmosphere is perfect for getting things done or taking a relaxing
-            break. I highly recommend it to anyone looking for a great cup of
-            coffee and a space that makes work feel just a little bit easier.
-          </p>
-          <div>
-            <p>Jonny Thomas</p>
-            <p>Project Manager</p>
-          </div>
-          <div id="imgCliente"></div>
-        </div>
+        <div id="carrosel"></div>
 
         <img
           class="liquidCoffee left"
@@ -191,6 +176,7 @@
           src="assets/img/a6567547d67a18e682720d04a29394ad489706ee.png"
           alt=""
         />
+        <p class="marks">“</p>
       </section>
 
       <section class="containerSubscribe">
@@ -268,6 +254,9 @@
         </div>
       </div>
     </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="libs/slick/slick.min.js"></script>
+    <script src="libs/scriptSlick.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>
