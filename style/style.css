@@ -121,6 +121,7 @@ main {
 
 .containerDicover img {
   width: 40%;
+  max-width: 500px;
   height: auto;
 }
 
@@ -397,7 +398,7 @@ table tr {
 }
 
 .containrFeendback #carrosel {
-  width: 980px;
+  width: 990px;
   height: 524px;
   background: #fff9f1;
   border: 1px solid rgba(249, 192, 106, 0.42);
@@ -411,22 +412,32 @@ table tr {
 }
 
 .painel {
-  height: 524px !important;
-  padding: 160px 150px 0;
-  width: 980px !important;
+  height: 580px !important;
+  padding: 0 110px 0;
+  width: 990px !important ;
   position: relative;
+  display: flex !important;
+  flex-direction: column;
+  justify-content: center;
+  gap: 15px;
+  padding-bottom: 10px;
 }
 
 .painel > p {
   font-size: 18px;
   margin-bottom: 20px;
-  line-height: 30px;
+  height: 185px;
+  display: flex;
+  align-items: end;
+  line-height: 36px;
+  font-weight: 600;
 }
 
 .painelText {
   display: flex;
   flex-direction: column;
   gap: 10px;
+  /* margin-bottom: 50px; */
 }
 .marks {
   font-size: 220px;
@@ -438,18 +449,18 @@ table tr {
 
 .liquidCoffee {
   position: absolute;
-  width: 27%;
+  width: 30%;
   min-width: 300px;
 }
 
 .left {
-  bottom: -35px;
+  bottom: -15px;
   left: 0;
 }
 
 .right {
   right: 0;
-  top: 60px;
+  top: 70px;
   transform: rotate(180deg);
 }
 
@@ -480,8 +491,9 @@ table tr {
 .containerSubscribe > div {
   display: flex;
   flex-direction: column;
+  gap: 10px;
 }
-.containerSubscribe div > p:nth-child(1) {
+.textSubscribe {
   font-size: 54px;
   color: #ffffff;
   font-weight: bold;
@@ -490,17 +502,42 @@ table tr {
 .containerSubscribe div > p:nth-child(2) {
   margin-bottom: 30px;
   color: #ffffffcc;
+  font-size: 20px;
 }
 
-.containerSubscribe img {
+.containerSubscribe > img {
   width: 50%;
   max-width: 526px;
 }
 
-.containerSubscribe div > div {
+.painelForm {
   display: flex;
   width: 655px;
   height: 66px;
+  position: relative;
+}
+
+.iconLoading {
+  display: none;
+  width: 50px;
+  height: 50px;
+  border: 6px solid #ffffff;             /* cor de fundo */
+  border-top: 6px solid #4e2c04;      /* cor do efeito */
+  border-radius: 50%;
+  animation: spin 1s linear infinite; 
+  animation: girar 2s linear infinite;
+  position: absolute;
+  right: 50px;
+  top: 10px;
+}
+
+@keyframes girar{
+  0%{
+    transform: rotate(0deg);
+    
+  }100%{
+    transform: rotate(360deg);
+  }
 }
 
 #email {
@@ -510,16 +547,34 @@ table tr {
   border-radius: 4px 0 0 4px;
   font-family: "Playfair Display";
   font-size: 20px;
+  outline: none;
 }
+
+.inpuntError::placeholder {
+  color: #ff0000;
+}
+
 .containerSubscribe button {
-  background: #f9c06a;
+  width: 179px;
+  border: none;
+  color: #603809;
   box-shadow: 0px 6px 12px rgba(249, 192, 106, 0.22);
   border-radius: -0 4px 4px 0px;
   border: none;
-  font-family: "Playfair Display";
   font-weight: bold;
   font-size: 22px;
   padding: 20px;
+  cursor: pointer;
+}
+
+.textApproved {
+  font-size: 20px;
+  color: rgb(255, 255, 255);
+  position: absolute;
+  bottom: -30px;
+  right: 0;
+  font-family: sans-serif;
+  font-weight: 600;
 }
 
 footer {
@@ -598,9 +653,10 @@ footer > div:nth-child(2) div {
 
 .slick-prev,
 .slick-next {
-  background-color: rgba(0, 0, 0, 0.5); /* Cor de fundo */
-  border: none; /* Sem borda */
-  color: white; /* Cor do ícone ou texto */
-  padding: 10px; /* Espaçamento dentro do botão */
-  font-size: 18px; /* Tamanho do ícone ou texto */
+  background-color: rgba(0, 0, 0, 0.5); 
+  border: none; 
+  color: rgb(0, 0, 0); 
+  padding: 10px; 
+  font-size: 18px;
 }
+
