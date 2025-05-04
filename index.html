@@ -61,56 +61,7 @@
           experiencing
         </p>
         <div class="dashboardCards">
-          <div class="card">
-            <img
-              src="assets/img/4bab679797a32ce3b40a10cb6cfcdd3fa190220a.jpg"
-              alt=""
-            />
-            <div class="cardAtributes">
-              <p id="name">Cappuccino</p>
-              <p id="percentage">Coffee 35% | Milk 65%</p>
-              <p id="value">R$2.50</p>
-              <button class="buttonOrder">Order Now</button>
-            </div>
-          </div>
-
-          <div class="card">
-            <img
-              src="assets/img/8b5313290bc32724346fb4d69f87cac3a1e1c7f8.jpg"
-              alt=""
-            />
-            <div class="cardAtributes">
-              <p id="name">Cappuccino</p>
-              <p id="percentage">Coffee 35% | Milk 65%</p>
-              <p id="value">R$2.50</p>
-              <button class="buttonOrder">Order Now</button>
-            </div>
-          </div>
-
-          <div class="card">
-            <img
-              src="assets/img/4efad0ba2a26c2f711f3cca80ee2e4bcbc443e06.jpg"
-              alt=""
-            />
-            <div class="cardAtributes">
-              <p id="name">Cappuccino</p>
-              <p id="percentage">Coffee 35% | Milk 65%</p>
-              <p id="value">R$2.50</p>
-              <button class="buttonOrder">Order Now</button>
-            </div>
-          </div>
-
-          <div class="card">
-            <img
-              src="assets/img/4840b0d1d112b723d1248c13c39df3f18a0a07a0.jpg"
-              alt=""
-            />
-            <div class="cardAtributes">
-              <p id="name">Cappuccino</p>
-              <p id="percentage">Coffee 35% | Milk 65%</p>
-              <p id="value">R$2.50</p>
-              <button class="buttonOrder">Order Now</button>
-            </div>
+          
           </div>
         </div>
       </section>
@@ -181,19 +132,23 @@
 
       <section class="containerSubscribe">
         <div>
-          <p>Subscribe to get offers!</p>
+          <p class="textSubscribe">Subscribe to get offers!</p>
           <p>
             Don’t miss out on our latest news, updates, tips and special offers
           </p>
-          <div class="campo">
+          <div class="painelForm">
+            <p class="textApproved">Email Already registered
+            </p>
             <input
               type="email"
               name="email"
               id="email"
               placeholder="Enter your mail"
             />
-            <button type="submit">Subscribe</button>
+            <button id="buttonEmail" onclick="validateEmail(event)" type="submit"></button>
+            <div class="iconLoading"></div>
           </div>
+        
         </div>
         <img
           src="assets/img/bc1a7d0b38e15540379068957cb03dd05dfe1ff4.png"
@@ -256,7 +211,6 @@
     </footer>
     <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
     <script src="libs/slick/slick.min.js"></script>
-    <script src="libs/scriptSlick.js"></script>
     <script src="js/script.js"></script>
   </body>
 </html>
