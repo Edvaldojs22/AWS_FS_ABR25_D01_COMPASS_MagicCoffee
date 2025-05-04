@@ -227,9 +227,10 @@ main {
   width: 100%;
   max-width: 1190px;
   margin-bottom: 50px;
+  position: relative;
 }
 
-.containerTable div:nth-child(1) {
+.containerTable > div:nth-child(1) {
   display: flex;
   flex-wrap: wrap;
   justify-content: space-between;
@@ -521,21 +522,21 @@ table tr {
   display: none;
   width: 50px;
   height: 50px;
-  border: 6px solid #ffffff;             /* cor de fundo */
-  border-top: 6px solid #4e2c04;      /* cor do efeito */
+  border: 6px solid #ffffff; /* cor de fundo */
+  border-top: 6px solid #4e2c04; /* cor do efeito */
   border-radius: 50%;
-  animation: spin 1s linear infinite; 
+  animation: spin 1s linear infinite;
   animation: girar 2s linear infinite;
   position: absolute;
   right: 50px;
   top: 10px;
 }
 
-@keyframes girar{
-  0%{
+@keyframes girar {
+  0% {
     transform: rotate(0deg);
-    
-  }100%{
+  }
+  100% {
     transform: rotate(360deg);
   }
 }
@@ -653,10 +654,74 @@ footer > div:nth-child(2) div {
 
 .slick-prev,
 .slick-next {
-  background-color: rgba(0, 0, 0, 0.5); 
-  border: none; 
-  color: rgb(0, 0, 0); 
-  padding: 10px; 
+  background-color: rgba(0, 0, 0, 0.5);
+  border: none;
+  color: rgb(0, 0, 0);
+  padding: 10px;
   font-size: 18px;
 }
 
+.loading {
+  display: none;
+  justify-content: center;
+  align-items: center;
+  gap: 20px;
+  position: absolute;
+  top: 300px;
+  left: 50%;
+  transform: translate(-50%);
+}
+
+.loading img {
+  position: absolute;
+  top: -100px;
+  width: 70px;
+  animation: alternates 1.9s infinite linear;
+}
+
+.box {
+  width: 20px;
+  height: 20px;
+  background-color: #aa8558;
+  border-radius: 50%;
+  opacity: 0;
+  animation: blink 1.2s infinite;
+}
+
+.box:nth-child(1) {
+  animation-delay: 0s;
+}
+.box:nth-child(2) {
+  animation-delay: 0.2s;
+}
+.box:nth-child(3) {
+  animation-delay: 0.4s;
+}
+.box:nth-child(4) {
+  animation-delay: 0.6s;
+}
+.box:nth-child(5) {
+  animation-delay: 0.8s;
+}
+
+@keyframes blink {
+  0%,
+  100% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+}
+
+@keyframes alternates {
+  0% {
+    top: -100px;
+  }
+  50% {
+    top: -90px;
+  }
+  100% {
+    top: -100px;
+  }
+}
