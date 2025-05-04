@@ -55,7 +55,7 @@
             "price": 3.90,
             "short_description": "Cold brewed coffee infused with coconut water",
             "is_new": true,
-            "imagem_url": "https://img.freepik.com/vetores-gratis/xicara-realista-de-cafe-preto-na-ilustracao-vetorial-de-pires_1284-66002.jpg",
+            "imagem_url": "../assets/img/coffe1.jpg",
             "ingredients_ratio": [
                 {
                     "ingredient": "Cold Brew",
@@ -83,7 +83,7 @@
             "price": 3.75,
             "short_description": "Creamy green tea latte made with ceremonial matcha",
             "is_new": true,
-            "imagem_url": "https://img.freepik.com/vetores-gratis/xicara-realista-de-cafe-preto-na-ilustracao-vetorial-de-pires_1284-66002.jpg",
+            "imagem_url": "../assets/img/coffe2.jpg",
             "ingredients_ratio": [
                 {
                     "ingredient": "Milk",
@@ -158,7 +158,7 @@
             "price": 4.10,
             "short_description": "Cold brew with hazelnut syrup and silky cold foam",
             "is_new": true,
-            "imagem_url": "https://img.freepik.com/vetores-gratis/xicara-realista-de-cafe-preto-na-ilustracao-vetorial-de-pires_1284-66002.jpg",
+            "imagem_url": "../assets/img/coffe3.jpg",
             "ingredients_ratio": [
                 {
                     "ingredient": "Cold Brew",
@@ -213,7 +213,7 @@
             "price": 4.60,
             "short_description": "Espresso with steamed milk and pumpkin spice syrup",
             "is_new": true,
-            "imagem_url": "https://img.freepik.com/vetores-gratis/xicara-realista-de-cafe-preto-na-ilustracao-vetorial-de-pires_1284-66002.jpg",
+            "imagem_url":"../assets/img/d82c23a4c48f5798630e23cbbe9800939428018f.jpg",
             "ingredients_ratio": [
                 {
                     "ingredient": "Milk",
