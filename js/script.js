@@ -21,7 +21,8 @@ async function searchData() {
     pushFeedbaks();
     $("#carrosel").slick({
       arrows: true,
-
+      autoplay: true,
+      autoplaySpeed: 3000,
       prevArrow:
         '<button type="button" class="slick-prev"> <img class="imgArrawLeft"  src="assets/img/left-arrow.png" alt=""></button>',
       nextArrow:
@@ -106,26 +107,35 @@ function convertToReal(value) {
 const buttonFilter = document.querySelectorAll(".buttonFilter");
 buttonFilter[0].style.backgroundColor = "#F9C06A";
 buttonFilter[0].style.color = "#aa8558";
+const loadigBoxs = document.querySelector(".loading");
 
 buttonFilter.forEach((filterButton) =>
   filterButton.addEventListener("click", (event) => {
+    loadigBoxs.style.display = "flex";
+    tableBody.style.opacity = "0";
+
     buttonFilter.forEach((button) => {
       button.style.backgroundColor = "";
       button.style.color = "#aa8558";
     });
-
-    const typeToFilter = filterButton.getAttribute("data-type");
-
     event.target.style.backgroundColor = "#F9C06A";
     event.target.style.color = "#000000";
-    if (typeToFilter === "All") {
-      updateTable(dataItems);
-    } else {
-      const filteredItems = dataItems.filter(
-        (item) => item.type === typeToFilter
-      );
-      updateTable(filteredItems);
-    }
+
+    setTimeout(() => {
+      loadigBoxs.style.display = "none";
+      tableBody.style.opacity = "1";
+
+      const typeToFilter = filterButton.getAttribute("data-type");
+
+      if (typeToFilter === "All") {
+        updateTable(dataItems);
+      } else {
+        const filteredItems = dataItems.filter(
+          (item) => item.type === typeToFilter
+        );
+        updateTable(filteredItems);
+      }
+    }, 2500);
   })
 );
 
