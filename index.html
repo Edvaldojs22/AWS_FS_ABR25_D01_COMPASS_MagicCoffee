@@ -1,226 +1,209 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Magic Coffee</title>
-    <link rel="stylesheet" href="style/style.css" />
-    <link rel="stylesheet" href="libs/slick/slick.css" />
-    <link rel="stylesheet" href="libs/slick/slick-theme.css" />
-  </head>
-  <body>
-    <header>
-      <h1>Bean Scene</h1>
-      <nav>
-        <a href="">Home</a>
-        <a href="">Menu</a>
-        <a href="">About Us</a>
-        <a href="">Contact Us</a>
-      </nav>
-      <button class="buttonOrder">Order now</button>
-    </header>
 
-    <section class="containerCoffe">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Magic Coffee</title>
+  <link rel="stylesheet" href="style/style.css" />
+  <link rel="stylesheet" href="libs/slick/slick.css" />
+  <link rel="stylesheet" href="libs/slick/slick-theme.css" />
+</head>
+
+<body>
+  <header>
+    <h1>Bean Scene</h1>
+    <nav>
+      <a href="">Home</a>
+      <a href="">Menu</a>
+      <a href="">About Us</a>
+      <a href="">Contact Us</a>
+    </nav>
+    <button class="buttonOrder">Order now</button>
+  </header>
+
+  <section class="containerCoffe">
+    <div>
+      <p>We’ve got your morning covered with</p>
+      <p>Coffee</p>
+      <p>
+        It is best to start your day with a cup of coffee. Discover the best
+        flavours coffee you will ever have. We provide the best for our
+        customers.
+      </p>
+      <button class="buttonOrder">Order now</button>
+    </div>
+  </section>
+
+  <main>
+    <section class="containerDicover">
       <div>
-        <p>We’ve got your morning covered with</p>
-        <p>Coffee</p>
+        <h2 class="title">Discover the best coffee</h2>
         <p>
-          It is best to start your day with a cup of coffee. Discover the best
-          flavours coffee you will ever have. We provide the best for our
-          customers.
+          Bean Scene is a coffee shop that provides you with quality coffee
+          that helps boost your productivity and helps build your mood. Having
+          a cup of coffee is good, but having a cup of real coffee is greater.
+          There is no doubt that you will enjoy this coffee more than others
+          you have ever tasted.
         </p>
-        <button class="buttonOrder">Order now</button>
+        <button class="buttonOrder">Learn More</button>
+      </div>
+      <img src="assets/img/05ea.jpg" alt="" />
+      <img class="imgCofferPosition" src="assets/img/a6567547d67a18e682720d04a29394ad489706ee.png" alt="" />
+    </section>
+
+    <section class="containerCards">
+      <h3 class="title">Enjoy a new blend of coffee style</h3>
+      <p>
+        Explore all flavours on our menu with us. There is always a new worth
+        experiencing
+      </p>
+      <div class="dashboardCards">
+
+      </div>
       </div>
     </section>
 
-    <main>
-      <section class="containerDicover">
-        <div>
-          <h2 class="title">Discover the best coffee</h2>
-          <p>
-            Bean Scene is a coffee shop that provides you with quality coffee
-            that helps boost your productivity and helps build your mood. Having
-            a cup of coffee is good, but having a cup of real coffee is greater.
-            There is no doubt that you will enjoy this coffee more than others
-            you have ever tasted.
-          </p>
-          <button class="buttonOrder">Learn More</button>
-        </div>
-        <img src="assets/img/05ea.jpg" alt="" />
-        <img
-          class="imgCofferPosition"
-          src="assets/img/a6567547d67a18e682720d04a29394ad489706ee.png"
-          alt=""
-        />
-      </section>
+    <section class="containerTable">
 
-      <section class="containerCards">
-        <h3 class="title">Enjoy a new blend of coffee style</h3>
-        <p>
-          Explore all flavours on our menu with us. There is always a new worth
-          experiencing
-        </p>
-        <div class="dashboardCards">
-          
-          </div>
-        </div>
-      </section>
-
-      <section class="containerTable">
-      
-        <div>
-          <button class="buttonFilter" data-type="All">All items</button>
-          <button class="buttonFilter" data-type="Hot Beverage">
-            WaRM drinks
-          </button>
-          <button class="buttonFilter" data-type="Cold Beverage">
-            Cold drinks
-          </button>
-          <button class="buttonFilter" data-type="Savory Snack">Snacks</button>
-          <button class="buttonFilter" data-type="Bakery">Dessert</button>
-        </div>
-
-        <div>
-          <table>
-            
-            <thead>
-              <tr>
-                <th>Item</th>
-                <th>Type</th>
-                <th>Price</th>
-              </tr>
-            </thead>
-            <tbody id="tableBody"></tbody>
-          </table>
-        </div>
-        <div class="loading">
-          <img src="assets/img/coffee.png" alt="">
-          <div class="box"></div>
-          <div class="box"></div>
-          <div class="box"></div>
-          <div class="box"></div>
-          <div class="box"></div>
-        </div>
-      </section>
-
-      <div class="coffeDashboard">
-        <div>
-          <p>Get a chance to have an Amazing morning</p>
-          <p>
-            We are giving you are one time opportunity to experience a better
-            life with coffee.
-          </p>
-          <button class="buttonOrder">Order Now</button>
-        </div>
-
-        <div>
-          <img
-            src="assets/img/c59a18f0dfc25bdd20ee157b4d0e8da359dc0c1f.png"
-            alt=""
-          />
-        </div>
-      </div>
-
-      <section class="containrFeendback">
-        <h4 class="title">Our coffee perfection feedback</h4>
-        <p class="pa">Our customers has amazing things to say about us</p>
-
-        <div id="carrosel"></div>
-
-        <img
-          class="liquidCoffee left"
-          src="assets/img/a6567547d67a18e682720d04a29394ad489706ee.png"
-          alt=""
-        />
-        <img
-          class="liquidCoffee right"
-          src="assets/img/a6567547d67a18e682720d04a29394ad489706ee.png"
-          alt=""
-        />
-        <p class="marks">“</p>
-      </section>
-
-      <section class="containerSubscribe">
-        <div>
-          <p class="textSubscribe">Subscribe to get offers!</p>
-          <p>
-            Don’t miss out on our latest news, updates, tips and special offers
-          </p>
-          <div class="painelForm">
-            <p class="textApproved">Email Already registered
-            </p>
-            <input
-              type="email"
-              name="email"
-              id="email"
-              placeholder="Enter your mail"
-            />
-            <button id="buttonEmail" onclick="validateEmail(event)" type="submit"></button>
-            <div class="iconLoading"></div>
-          </div>
-        
-        </div>
-        <img
-          src="assets/img/bc1a7d0b38e15540379068957cb03dd05dfe1ff4.png"
-          alt=""
-        />
-      </section>
-    </main>
-
-    <footer>
       <div>
-        <p>Bean Scene</p>
-        <p>
-          Lorem Ipsum is simply dummy text of the printing and typesetting
-          industry. Lorem Ipsum has been the industry's standard dummy text ever
-          since the 1500s, when an unknown printer took a galley of type and
-          scrambled it to make a type specimen book.
-        </p>
-        <div>
-          <img src="assets/img/facebook.png" alt="" />
-          <img src="assets/img/instagram.png" alt="" />
-          <img src="assets/img/youtube.png" alt="" />
-          <img src="assets/img/twitter.png" alt="" />
-        </div>
+        <button class="buttonFilter" data-type="All">All items</button>
+        <button class="buttonFilter" data-type="Hot Beverage">
+          WaRM drinks
+        </button>
+        <button class="buttonFilter" data-type="Cold Beverage">
+          Cold drinks
+        </button>
+        <button class="buttonFilter" data-type="Savory Snack">Snacks</button>
+        <button class="buttonFilter" data-type="Bakery">Dessert</button>
       </div>
 
       <div>
-        <div class="column">
-          <p>About</p>
-          <div>
-            <p>Menu</p>
-            <p>Features</p>
-            <p>New & Blogs</p>
-            <p>Help & Support</p>
-          </div>
+        <table>
+
+          <thead>
+            <tr>
+              <th>Item</th>
+              <th>Type</th>
+              <th>Price</th>
+            </tr>
+          </thead>
+          <tbody id="tableBody"></tbody>
+        </table>
+      </div>
+      <div class="loading">
+        <img src="assets/img/coffee.png" alt="">
+        <div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
+          <div class="box"></div>
         </div>
 
-        <div class="column">
-          <p>Company</p>
-          <div>
-            <p>How we work</p>
-            <p>Terms of service</p>
-            <p>Pricing</p>
-            <p>FAQ</p>
-          </div>
+      </div>
+    </section>
+
+    <div class="coffeDashboard">
+      <div>
+        <p>Get a chance to have an Amazing morning</p>
+        <p>
+          We are giving you are one time opportunity to experience a better
+          life with coffee.
+        </p>
+        <button class="buttonOrder">Order Now</button>
+      </div>
+
+      <div>
+        <img src="assets/img/c59a18f0dfc25bdd20ee157b4d0e8da359dc0c1f.png" alt="" />
+      </div>
+    </div>
+
+    <section class="containrFeendback">
+      <h4 class="title">Our coffee perfection feedback</h4>
+      <p class="pa">Our customers has amazing things to say about us</p>
+
+      <div id="carrosel"></div>
+
+      <img class="liquidCoffee left" src="assets/img/a6567547d67a18e682720d04a29394ad489706ee.png" alt="" />
+      <img class="liquidCoffee right" src="assets/img/a6567547d67a18e682720d04a29394ad489706ee.png" alt="" />
+      <p class="marks">“</p>
+    </section>
+
+    <section class="containerSubscribe">
+      <div>
+        <p class="textSubscribe">Subscribe to get offers!</p>
+        <p>
+          Don’t miss out on our latest news, updates, tips and special offers
+        </p>
+        <div class="painelForm">
+          <p class="textApproved">Email Already registered
+          </p>
+          <input type="email" name="email" id="email" placeholder="Enter your mail" />
+          <button id="buttonEmail" onclick="validateEmail(event)" type="submit"></button>
+          <div class="iconLoading"></div>
         </div>
 
-        <div class="column">
-          <p>Contact Us</p>
-          <div>
-            <p>
-              Akshya Nagar 1st Block 1st Cross, Rammurthy nagar,
-              Bangalore-560016
-            </p>
-            <p>+1 202-918-2132</p>
-            <p>beanscene@mail.com</p>
-            <p>www.beanscene.com</p>
-          </div>
+      </div>
+      <img src="assets/img/bc1a7d0b38e15540379068957cb03dd05dfe1ff4.png" alt="" />
+    </section>
+  </main>
+
+  <footer>
+    <div>
+      <p>Bean Scene</p>
+      <p>
+        Lorem Ipsum is simply dummy text of the printing and typesetting
+        industry. Lorem Ipsum has been the industry's standard dummy text ever
+        since the 1500s, when an unknown printer took a galley of type and
+        scrambled it to make a type specimen book.
+      </p>
+      <div>
+        <img src="assets/img/facebook.png" alt="" />
+        <img src="assets/img/instagram.png" alt="" />
+        <img src="assets/img/youtube.png" alt="" />
+        <img src="assets/img/twitter.png" alt="" />
+      </div>
+    </div>
+
+    <div>
+      <div class="column">
+        <p>About</p>
+        <div>
+          <p>Menu</p>
+          <p>Features</p>
+          <p>New & Blogs</p>
+          <p>Help & Support</p>
         </div>
       </div>
-    </footer>
-    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
-    <script src="libs/slick/slick.min.js"></script>
-    <script src="js/script.js"></script>
-  </body>
+
+      <div class="column">
+        <p>Company</p>
+        <div>
+          <p>How we work</p>
+          <p>Terms of service</p>
+          <p>Pricing</p>
+          <p>FAQ</p>
+        </div>
+      </div>
+
+      <div class="column">
+        <p>Contact Us</p>
+        <div>
+          <p>
+            Akshya Nagar 1st Block 1st Cross, Rammurthy nagar,
+            Bangalore-560016
+          </p>
+          <p>+1 202-918-2132</p>
+          <p>beanscene@mail.com</p>
+          <p>www.beanscene.com</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+  <script src="libs/slick/slick.min.js"></script>
+  <script src="js/script.js"></script>
+</body>
+
 </html>
