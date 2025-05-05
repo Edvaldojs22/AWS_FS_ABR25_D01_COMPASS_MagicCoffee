@@ -192,7 +192,7 @@ function setSubscribedUI() {
 function setUnsubscribedUI() {
   textApproved.style.display = "none";
   buttonEmail.style.backgroundColor = "#F9C06A";
-  buttonEmail.style.color = ""; 
+  buttonEmail.style.color = "";
   buttonEmail.textContent = "Subscribe";
 }
 
@@ -286,3 +286,33 @@ function validateEmail(event) {
     }, 2000);
   }
 }
+
+const menu = document.querySelector(".menu");
+const containerMenu = document.querySelector(".containerMenu");
+const lines = document.querySelectorAll(".line1, .line2");
+const title = document.querySelector("#title");
+
+let teste = false;
+
+menu.addEventListener("click", () => {
+  lines.forEach((l) => {
+    l.classList.toggle("active");
+  });
+
+  if (teste) {
+    containerMenu.classList.remove("containerMenuShow");
+    teste = false;
+    title.style.color="white"
+    lines.forEach((l) => {
+      l.style.background = "#ffffff";
+    });
+  } else {
+    containerMenu.classList.add("containerMenuShow");
+    teste = true;
+    title.style.color ="#000000"
+    lines.forEach((l) => {
+      l.style.background = "black";
+    });
+  }
+
+});

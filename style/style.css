@@ -1,6 +1,7 @@
 @import url("https://fonts.googleapis.com/css2?family=Clicker+Script&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pangolin&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Clicker+Script&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pangolin&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Clicker+Script&family=Montserrat:ital,wght@0,100..900;1,100..900&family=Pangolin&family=Playfair+Display:ital,wght@0,400..900;1,400..900&family=Quicksand:wght@300..700&family=Roboto:ital,wght@0,100..900;1,100..900&display=swap");
+
 * {
   margin: 0;
   padding: 0;
@@ -9,6 +10,10 @@
 
 body {
   position: relative;
+}
+
+.dashboardMenu {
+  display: none;
 }
 
 header {
@@ -549,7 +554,7 @@ table tr {
   width: 50px;
   height: 50px;
   border: 6px solid #ffffff;
-  border-top: 6px solid #4e2c04; 
+  border-top: 6px solid #4e2c04;
   border-radius: 50%;
   animation: spin 1s linear infinite;
   animation: girar 2s linear infinite;
@@ -752,5 +757,181 @@ footer > div:nth-child(2) div {
   }
   100% {
     top: -100px;
+  }
+}
+
+/* Parte responsiva */
+
+@media screen and (max-width: 900px) {
+  header {
+    display: none;
+  }
+
+  .containerCoffe {
+    height: 100vh;
+    margin: 0;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .containerCoffe div {
+    margin: 0;
+    font-size: 15px;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+  }
+
+  .containerCoffe div p:nth-child(2) {
+    font-size: 160px;
+  }
+
+  .containerCoffe div p:nth-child(3) {
+    max-width: 400px;
+    padding: 0 10px;
+  }
+
+  .dashboardMenu {
+    display: block;
+    height: 70px;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(255, 255, 255, 0);
+  }
+
+  .dashboardMenu h1 {
+    color: #ffffff;
+    position: absolute;
+    top: 30px;
+    left: 30px;
+    z-index: 2;
+  }
+
+  .containerMenu h1 {
+    position: absolute;
+    z-index: 2;
+    top: 30px;
+    left: 40px;
+    color: rgb(255, 255, 255);
+    font-size: 35px;
+  }
+
+  .containerMenu {
+    width: 100%;
+    opacity: 30px;
+    height: 0;
+    position: absolute;
+    background-color: rgb(255, 255, 255);
+    right: 0;
+    top: 0;
+    transition: 0.2s linear;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    overflow: hidden;
+    font-family: "Quicksand";
+    font-weight: 300;
+    gap: 50px;
+    position: relative;
+  }
+
+  .containerMenu a {
+    font-size: 30px;
+    font-weight: 600;
+    color: rgb(0, 0, 0);
+    margin: 0;
+    font-family: "Quicksand";
+  }
+
+  .containerMenu .buttonOrder {
+    margin: 0 0 20px 0;
+    width: 200px;
+    border-radius: 10px;
+  }
+
+  .containerMenu img {
+    width: 100px;
+    position: absolute;
+    bottom: 60px;
+    animation: alternatess 1.9s infinite linear;
+  }
+
+  @keyframes alternatess {
+    0% {
+      bottom: 60px;
+    }
+    50% {
+      bottom: 70px;
+    }
+    100% {
+      bottom: 60px;
+    }
+  }
+
+  .containerMenuShow {
+    height: 100vh;
+  }
+
+  .menu {
+    width: 50px;
+    height: 50px;
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    z-index: 2;
+  }
+
+  .line1,
+  .line2 {
+    background-color: rgb(255, 255, 255);
+    border-radius: 10px;
+    content: "";
+    position: absolute;
+    width: 100%;
+    height: 3px;
+  }
+
+  .line1.active {
+    animation: girarUm linear 0.3s forwards;
+  }
+
+  .line2.active {
+    animation: girarDois linear 0.3s forwards;
+  }
+
+  .line1 {
+    top: 70%;
+  }
+
+  .line2 {
+    top: 30%;
+  }
+
+  @keyframes girarUm {
+    from {
+      top: 70%;
+      transform: rotate(0);
+    }
+
+    to {
+      top: 50%;
+      transform: rotate(50deg);
+    }
+  }
+
+  @keyframes girarDois {
+    from {
+      top: 30%;
+      transform: rotate(0);
+    }
+
+    to {
+      top: 50%;
+      transform: rotate(-50deg);
+    }
   }
 }
