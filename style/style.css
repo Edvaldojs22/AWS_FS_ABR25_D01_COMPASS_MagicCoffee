@@ -321,7 +321,7 @@ tbody td {
   color: #968162;
 }
 
-thead tr{
+thead tr {
   height: 60px;
 }
 
@@ -465,7 +465,6 @@ table tr {
   display: flex;
   flex-direction: column;
   gap: 10px;
-  /* margin-bottom: 50px; */
 }
 .marks {
   font-size: 220px;
@@ -549,8 +548,8 @@ table tr {
   display: none;
   width: 50px;
   height: 50px;
-  border: 6px solid #ffffff; /* cor de fundo */
-  border-top: 6px solid #4e2c04; /* cor do efeito */
+  border: 6px solid #ffffff;
+  border-top: 6px solid #4e2c04; 
   border-radius: 50%;
   animation: spin 1s linear infinite;
   animation: girar 2s linear infinite;
@@ -697,7 +696,6 @@ footer > div:nth-child(2) div {
   top: 260px;
   left: 50%;
   transform: translate(-50%);
- 
 }
 
 .loading img {

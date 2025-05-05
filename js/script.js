@@ -192,7 +192,7 @@ function setSubscribedUI() {
 function setUnsubscribedUI() {
   textApproved.style.display = "none";
   buttonEmail.style.backgroundColor = "#F9C06A";
-  buttonEmail.style.color = ""; // ou a cor padrão
+  buttonEmail.style.color = ""; 
   buttonEmail.textContent = "Subscribe";
 }
 
