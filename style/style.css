@@ -161,9 +161,10 @@ main {
   text-align: center;
   width: 100%;
   margin-bottom: 100px;
+  font-family: "Playfair Display";
 }
 
-.containerCards p {
+.containerCards > p {
   font-size: 20px;
   font-family: "Playfair Display";
   color: #707070;
@@ -181,7 +182,10 @@ main {
   background-color: #fff9f1;
   border: solid 1px #fbe1be;
   max-width: 280px;
-  height: 366px;
+  height: 386px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }
 
 .card img {
@@ -189,6 +193,13 @@ main {
   max-width: 280px;
   height: 222px;
   object-fit: cover;
+}
+.cardAtributes {
+  padding: 0 5px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  margin-top: 10px;
 }
 
 .cardAtributes p:nth-child(1) {
@@ -204,19 +215,16 @@ main {
 .cardAtributes p:nth-child(3) {
   font-weight: bold;
   color: #603809;
+  font-size: 18px;
 }
 
 .cardAtributes {
   position: relative;
 }
 
-.cardAtributes p {
-  margin: 8px 0 0;
-}
-
 .cardAtributes .buttonOrder {
   position: absolute;
-  top: 105px;
+  top: 129px;
   left: 50%;
   transform: translate(-50%);
   cursor: pointer;
@@ -228,6 +236,7 @@ main {
   max-width: 1190px;
   margin-bottom: 50px;
   position: relative;
+  padding: 0 10px;
 }
 
 .containerTable > div:nth-child(1) {
@@ -238,7 +247,7 @@ main {
   max-width: 710px;
 }
 
-.containerTable div:nth-child(2) {
+.containerTable > div:nth-child(2) {
   border: 1px solid #aa855865;
   border-radius: 10px;
 }
@@ -253,6 +262,12 @@ main {
   font-family: "Playfair Display";
   margin: 5px;
   cursor: pointer;
+}
+
+.containerTable button:hover {
+  box-shadow: 0 0 10px #f9c06a;
+  transition: 0.3s;
+  transform: translateY(-8px);
 }
 
 table {
@@ -278,7 +293,7 @@ thead tr {
 }
 
 thead th {
-  padding: 15px 0 0 30px;
+  padding: 15px 0 15px 30px;
   text-align: left;
   font-weight: bold;
   width: 24%;
@@ -306,6 +321,10 @@ tbody td {
   color: #968162;
 }
 
+thead tr{
+  height: 60px;
+}
+
 tbody tr {
   display: flex;
   justify-content: space-between;
@@ -317,11 +336,12 @@ tbody td {
   display: flex;
   align-items: center;
   padding-left: 30px;
-  font-size: 22px;
+  font-size: 1.2rem;
 }
 
 table tr {
   border-bottom: 1px solid #ddd;
+  align-items: center;
 }
 
 .coffeDashboard {
@@ -338,6 +358,13 @@ table tr {
   justify-content: space-between;
   font-family: "Playfair Display";
   margin-bottom: 100px;
+}
+
+.coffeDashboard .buttonOrder {
+  padding: 20px 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 .coffeDashboard div:nth-child(1) {
@@ -663,25 +690,29 @@ footer > div:nth-child(2) div {
 
 .loading {
   display: none;
-  justify-content: center;
   align-items: center;
-  gap: 20px;
+  flex-direction: column;
+  gap: 10px;
   position: absolute;
-  top: 300px;
+  top: 260px;
   left: 50%;
   transform: translate(-50%);
+ 
 }
 
 .loading img {
-  position: absolute;
-  top: -100px;
-  width: 70px;
+  width: 60px;
   animation: alternates 1.9s infinite linear;
 }
 
+.loading div {
+  display: flex;
+  gap: 20px;
+}
+
 .box {
-  width: 20px;
-  height: 20px;
+  width: 17px;
+  height: 17px;
   background-color: #aa8558;
   border-radius: 50%;
   opacity: 0;
