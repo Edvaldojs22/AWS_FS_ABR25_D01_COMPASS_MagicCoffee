@@ -107,6 +107,8 @@ function convertToReal(value) {
 const buttonFilter = document.querySelectorAll(".buttonFilter");
 buttonFilter[0].style.backgroundColor = "#F9C06A";
 buttonFilter[0].style.color = "#aa8558";
+buttonFilter[0].style.transform = "translateY(-8px)";
+buttonFilter[0].style.color = "#000000";
 const loadigBoxs = document.querySelector(".loading");
 
 buttonFilter.forEach((filterButton) =>
@@ -117,9 +119,11 @@ buttonFilter.forEach((filterButton) =>
     buttonFilter.forEach((button) => {
       button.style.backgroundColor = "";
       button.style.color = "#aa8558";
+      button.style.transform = "translateY(0)";
     });
     event.target.style.backgroundColor = "#F9C06A";
     event.target.style.color = "#000000";
+    event.target.style.transform = "translateY(-8px)";
 
     setTimeout(() => {
       loadigBoxs.style.display = "none";
@@ -178,7 +182,6 @@ const buttonEmail = document.querySelector("#buttonEmail");
 const inputEmail = document.querySelector("#email");
 let emailValue;
 
-
 function setSubscribedUI() {
   textApproved.style.display = "block";
   buttonEmail.style.backgroundColor = "#ff0000";
@@ -214,7 +217,6 @@ function hideLoading() {
   iconLoading.style.display = "none";
 }
 
-
 window.addEventListener("DOMContentLoaded", () => {
   saved = localStorage.getItem("savedEmail");
   inputEmail.value = saved;
@@ -225,7 +227,6 @@ window.addEventListener("DOMContentLoaded", () => {
     setUnsubscribedUI();
   }
 });
-
 
 inputEmail.addEventListener("input", () => {
   emailValue = inputEmail.value;
@@ -241,7 +242,10 @@ function validateEmail(event) {
   const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
   if (regex.test(inputEmail.value)) {
-    if (inputEmail.value === saved && buttonEmail.textContent === "Unsubscribe") {
+    if (
+      inputEmail.value === saved &&
+      buttonEmail.textContent === "Unsubscribe"
+    ) {
       showLoading();
       textApproved.style.display = "none";
 
