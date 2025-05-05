@@ -178,31 +178,62 @@ const buttonEmail = document.querySelector("#buttonEmail");
 const inputEmail = document.querySelector("#email");
 let emailValue;
 
+
+function setSubscribedUI() {
+  textApproved.style.display = "block";
+  buttonEmail.style.backgroundColor = "#ff0000";
+  buttonEmail.style.color = "black";
+  buttonEmail.textContent = "Unsubscribe";
+}
+
+function setUnsubscribedUI() {
+  textApproved.style.display = "none";
+  buttonEmail.style.backgroundColor = "#F9C06A";
+  buttonEmail.style.color = ""; // ou a cor padrão
+  buttonEmail.textContent = "Subscribe";
+}
+
+function showMessage(message, color = "#ffffff") {
+  textApproved.textContent = message;
+  textApproved.style.display = "block";
+  textApproved.style.color = color;
+}
+
+function hideMessage(delay = 4500) {
+  setTimeout(() => {
+    textApproved.style.display = "none";
+  }, delay);
+}
+
+function showLoading() {
+  iconLoading.style.display = "block";
+  buttonEmail.textContent = "";
+}
+
+function hideLoading() {
+  iconLoading.style.display = "none";
+}
+
+
 window.addEventListener("DOMContentLoaded", () => {
   saved = localStorage.getItem("savedEmail");
   inputEmail.value = saved;
+
   if (inputEmail.value !== "") {
-    textApproved.style.display = "block";
-    buttonEmail.style.backgroundColor = "#ff0000";
-    buttonEmail.style.color = "black";
-    buttonEmail.textContent = "Unsubscribe";
+    setSubscribedUI();
   } else {
-    textApproved.style.display = "none";
-    buttonEmail.style.backgroundColor = "#F9C06A";
-    buttonEmail.textContent = "Subscribe";
+    setUnsubscribedUI();
   }
 });
 
+
 inputEmail.addEventListener("input", () => {
   emailValue = inputEmail.value;
-  if (saved == emailValue) {
-    buttonEmail.style.backgroundColor = "#ff0000";
-    textApproved.style.display = "block";
-    buttonEmail.textContent = "Unsubscribe";
+
+  if (saved === emailValue) {
+    setSubscribedUI();
   } else {
-    buttonEmail.style.backgroundColor = "#F9C06A";
-    textApproved.style.display = "none";
-    buttonEmail.textContent = "Subscribe";
+    setUnsubscribedUI();
   }
 });
 
@@ -210,55 +241,43 @@ function validateEmail(event) {
   const regex = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
   if (regex.test(inputEmail.value)) {
-    localStorage.setItem("savedEmail", inputEmail.value);
-    saved = inputEmail.value;
-
-    if (inputEmail.value == saved && buttonEmail.textContent == "Unsubscribe") {
-      iconLoading.style.display = "block";
-      buttonEmail.textContent = "";
+    if (inputEmail.value === saved && buttonEmail.textContent === "Unsubscribe") {
+      showLoading();
       textApproved.style.display = "none";
 
       setTimeout(() => {
         localStorage.clear();
-        saved = `"`;
-        iconLoading.style.display = "none";
-        buttonEmail.textContent = "Subscribe";
-        email.value = "";
-        textApproved.style.display = "block";
-        textApproved.style.color = "#ffffff";
-        textApproved.textContent = "Email removed.";
-        buttonEmail.style.backgroundColor = "#F9C06A";
-      }, 2000);
-
-      setTimeout(() => {
-        textApproved.style.display = "none";
-      }, 4500);
-    } else {
-      iconLoading.style.display = "block";
-      buttonEmail.textContent = "";
-      setTimeout(() => {
-        iconLoading.style.display = "none";
-        buttonEmail.textContent = "Subscribe";
-        localStorage.setItem("savedEmail", inputEmail.value);
-        textApproved.style.display = "block";
-        textApproved.textContent = "Successfully accomplished.";
-      }, 2000);
-
-      setTimeout(() => {
-        textApproved.style.display = "none";
+        saved = "";
+        hideLoading();
+        setUnsubscribedUI();
         inputEmail.value = "";
-      }, 4500);
+        showMessage("Email removed.");
+      }, 2000);
+
+      hideMessage();
+    } else {
+      showLoading();
+
+      setTimeout(() => {
+        hideLoading();
+        localStorage.setItem("savedEmail", inputEmail.value);
+        saved = inputEmail.value;
+        setUnsubscribedUI();
+        showMessage("Successfully accomplished.");
+        inputEmail.value = "";
+      }, 2000);
+
+      hideMessage();
     }
   } else {
-    iconLoading.style.display = "block";
-    buttonEmail.textContent = "";
+    showLoading();
 
     setTimeout(() => {
+      hideLoading();
       buttonEmail.textContent = "Subscribe";
       inputEmail.value = "";
       inputEmail.placeholder = "Invalid email";
       inputEmail.classList.add("inpuntError");
-      iconLoading.style.display = "none";
       inputEmail.focus();
     }, 2000);
   }
