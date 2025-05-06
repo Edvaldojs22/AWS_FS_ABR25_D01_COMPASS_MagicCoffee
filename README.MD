@@ -2,9 +2,9 @@
 
 ## 📖 Description
 
-**Magic Coffee - Bean Scene** is a front-end project developed as part of the Compass UOL internship program. It simulates a modern and responsive coffee shop website, showcasing interactive menus, feedback carousel, and email subscription functionality. 
+**Magic Coffee - Bean Scene** is a front-end project developed as part of the Compass UOL internship program. It simulates a modern and responsive coffee shop website, showcasing interactive menus, feedback carousel, and email subscription functionality.
 
-The application emphasizes DOM manipulation, asynchronous data handling, and UI interactivity through external libraries like Slick Carousel.
+The application emphasizes DOM manipulation, asynchronous data handling, and UI interactivity through external libraries like Slick Carousel. It also features a fully responsive interface and smooth animations created using CSS and JavaScript, enhancing the user experience across all devices.
 
 ---
 
@@ -16,16 +16,16 @@ The application emphasizes DOM manipulation, asynchronous data handling, and UI 
 - Customer feedback section with carousel
 - Email subscription form with validation and visual feedback
 - Responsive and accessible layout
+- Smooth animations using CSS and JavaScript
 
 ---
 
 ## 🛠 Technologies Used
 
-- HTML5  
-- CSS3  
-- JavaScript (ES6)  
-- jQuery  
+- HTML5
+- CSS3
+- JavaScript (ES6)
+- jQuery
 - [Slick Carousel](https://kenwheeler.github.io/slick/)
 
 ---
-
