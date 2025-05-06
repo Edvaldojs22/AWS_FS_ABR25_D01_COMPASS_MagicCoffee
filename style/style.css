@@ -788,9 +788,7 @@ footer > div:nth-child(2) div {
 
 @media screen and (max-width: 1072px) {
   .dashboardCards {
-    
     flex-wrap: wrap;
-   
   }
   .containrFeendback #carrosel {
     width: 600px !important;
