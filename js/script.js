@@ -211,6 +211,7 @@ function hideMessage(delay = 4500) {
 function showLoading() {
   iconLoading.style.display = "block";
   buttonEmail.textContent = "";
+  
 }
 
 function hideLoading() {
@@ -302,17 +303,33 @@ menu.addEventListener("click", () => {
   if (teste) {
     containerMenu.classList.remove("containerMenuShow");
     teste = false;
-    title.style.color="white"
+    title.style.color = "white";
     lines.forEach((l) => {
       l.style.background = "#ffffff";
     });
   } else {
     containerMenu.classList.add("containerMenuShow");
     teste = true;
-    title.style.color ="#000000"
+    title.style.color = "#000000";
     lines.forEach((l) => {
       l.style.background = "black";
     });
   }
-
 });
+
+const observer = new IntersectionObserver(
+  (entries) => {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        entry.target.classList.add("swing");
+        observer.unobserve(entry.target);
+      }
+    });
+  },
+  {
+    threshold: 1,
+  }
+);
+
+const coffeeCup = document.querySelector(".imgCoffee");
+observer.observe(coffeeCup);
